@@ -1,0 +1,329 @@
+@import "./variable";
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: $mainfont;
+}
+
+h1 {
+    font-family: $titlefont;
+}
+
+h2 {
+    font-size: 3rem;
+    font-family: $titlefont;
+}
+
+h3 {
+    margin: 0;
+}
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    background: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+
+    .logo {
+        color: $maincolor;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: block;
+        ul {
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+
+            li {
+                margin: 0 20px;
+
+                a {
+                    text-decoration: none;
+                    color: $maincolor;
+                }
+            }
+        }
+    }
+
+    .hamburger {
+        display: none;
+
+        i {
+            cursor: pointer;
+            font-size: 25px;
+            color: $maincolor;
+        }
+
+        .expanded-menu {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background: $maincolor;
+
+            .close-button {
+                display: flex;
+                justify-content: flex-end;
+                margin: 20px 20px 50px 0;
+                
+                i {
+                    color: $subcolor;
+                }
+            }
+
+            .menu-div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                
+                a {
+                    text-decoration: none;
+                    color: $subcolor;
+                    margin: 10px 0;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hamburger {
+            display: block;
+        }
+
+        .menu {
+            display: none;
+        }
+    }
+
+    // @media (max-width: ) {
+
+    // }
+}
+
+
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background: url("/img/header-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px;
+    }
+    
+
+    h2 {
+        text-transform: uppercase;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: row;
+
+        .about-image {
+            width: 50%;
+
+            img {
+                width: 100%;
+                border-radius: 5px;
+            }
+        }
+        
+        .about-context {
+            width: 50%;
+            padding: 0 40px;
+
+            p {
+                margin: 0 0 20px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            
+            .about-image {
+                width: 100%;
+            }
+            .about-context {
+                width: 100%;
+                padding: 20px 0;
+            }
+        }
+
+    }
+}
+
+.service {
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: -1 !important;
+
+    h2 {
+        text-transform: uppercase;
+    }
+
+    .item {
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+        margin: 10px;
+
+        img {
+            border-radius: 5px;
+        }
+
+        .overlay {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+
+            h3 {
+                font-family: $titlefont;
+                color: $subcolor;
+                font-size: 2rem;
+                text-transform: uppercase;
+                margin: 20px;
+            }
+
+            .image-api-div {
+                width: 100%;
+                height: 300px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            #select {
+                width: 100px;
+                padding: 10px;
+                cursor: pointer;
+                margin: 20px 0;
+                background: transparent;
+                border: 1px solid $subcolor;
+                border-radius: 5px;
+                font-size: 1rem;
+
+                &:hover {
+                    background: $highlightcolor;
+                    border: 1px solid $highlightcolor;
+                    color: $maincolor;
+                }
+            }
+        }
+    }
+
+    
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px;
+
+        .item {
+            .overlay {
+                h3 {
+                    font-size: 1.5rem;
+                }
+
+                .image-api-div {
+                    height: 250px;
+                }
+            }
+        }
+    }
+}
+
+.contact {
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    @media (max-width: 600px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+    }
+
+    h2 {
+        text-transform: uppercase;
+    }
+}
+
+.scroll-up {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 0;
+
+    button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+
+        i {
+            font-size: 30px;
+        }
+    }
+
+    &:hover {
+        background: $highlightcolor;
+        border-radius: 50%;
+
+        i {
+            color: $maincolor;
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    height: 70px;
+    background: $highlightcolor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $maincolor;
+}

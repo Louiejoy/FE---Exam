@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FE - Exam</title>
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/6a8178fccc.js" crossorigin="anonymous"></script>
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+
+</head>
+<body>
+
+    <!-- Navbar -->
+
+    <div class="navbar">
+        <div class="logo">
+              <h3>Logo</h3>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about-id">About</a></li>
+                <li><a href="#service-id">Pets</a></li>
+            </ul>
+        </div>
+        <div class="hamburger" id="hamburger-id">
+            <i class="fa-solid fa-bars" onclick="toggleFunction()"></i>
+            <div class="expanded-menu" id="expanded-menu-id">
+                <div class="close-button">
+                    <i class="fa-solid fa-xmark" onclick="toggleCloseFunction()"></i>
+                </div>
+                <div class="menu-div">
+                    <a href="#header" onclick="toggleCloseFunction()">Home</a>
+                    <a href="#about-id" onclick="toggleCloseFunction()">About</a>
+                    <a href="#service-id" onclick="toggleCloseFunction()">Service</a>
+                    <a href="#contact-id" onclick="toggleCloseFunction()">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+
+    <div class="header" id="header">
+        
+    </div>
+
+    <!-- Content -->
+
+        <div class="about" id="about-id">
+            <h2>About</h2>
+            <div class="content">
+                <div class="about-image">
+                    <img src="/img/About-image.jpg" alt="">
+                </div>
+                <div class="about-context">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea laboriosam temporibus, earum delectus soluta distinctio, nostrum cumque quidem pariatur accusantium provident perferendis deserunt maiores eos rerum excepturi sapiente vitae dolores?</p>
+
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat dolore nulla optio voluptas ad eum eaque repellat at quaerat, maiores asperiores corporis necessitatibus saepe rerum, quo blanditiis doloribus praesentium porro.</p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est delectus quae ducimus facere dolore. Illo, consequuntur. Incidunt dicta laudantium, non ab amet veniam consequatur officia minus cum quidem dolore, ad recusandae. Ratione voluptates delectus ad deserunt accusantium unde sunt beatae error fugit ipsa possimus aliquam aperiam laudantium sed architecto voluptas ea, itaque obcaecati sapiente. Velit cum praesentium a saepe omnis nesciunt sapiente blanditiis aliquam neque. Maxime ab ad perferendis perspiciatis labore nobis dignissimos corporis corrupti accusantium similique, reprehenderit eos accusamus sint veritatis, facilis illo amet, ipsum autem! Amet, expedita debitis ipsum odio ullam consequuntur, placeat repudiandae et perspiciatis laboriosam, culpa eaque! Optio voluptate voluptates id. Ducimus tempora eius ipsum! Molestiae, fugit assumenda nobis rem distinctio optio consectetur dignissimos eos sapiente ullam eveniet rerum modi quod quidem, reiciendis dolorum unde error nostrum, expedita deleniti cumque. Totam beatae deleniti architecto. Accusamus eligendi iure culpa earum quisquam impedit odio, quo numquam qui rem, velit vel incidunt voluptas blanditiis suscipit quidem porro explicabo, corrupti doloribus. Provident itaque sint tempora quis mollitia ullam architecto voluptatem magni, vitae consequatur vel, placeat nulla alias illum ipsum ut assumenda dolor in asperiores velit maxime rerum minus blanditiis! Impedit laudantium assumenda ipsa error explicabo fuga esse dolorum! Veniam, libero.</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="service" id="service-id">
+            
+            <div class="owl-carousel owl-theme" id="carousel">
+                <div class="item">
+                    <div class="overlay">
+                        <h3>Select a pet</h3>
+                        <button id="select" onclick="seeMoreFunction1()">Select</button>
+                        <div class="image-api-div" id="image-api-div1"></div>
+                    </div>
+                    
+                </div>
+                <div class="item">
+                    <div class="overlay">
+                        <h3>Select a pet</h3>
+                        <button id="select" onclick="seeMoreFunction2()">Select</button>
+                        <div class="image-api-div" id="image-api-div2"></div>
+                    </div>
+                    
+                </div>
+                <div class="item">
+                    <div class="overlay">
+                        <h3>Select a pet</h3>
+                        <button id="select" onclick="seeMoreFunction3()">Select</button>
+                        <div class="image-api-div" id="image-api-div3"></div>
+                    </div>
+                    
+                </div>
+                <div class="item">
+                    <div class="overlay">
+                        <h3>Select a pet</h3>
+                        <button id="select" onclick="seeMoreFunction4()">Select</button>
+                        <div class="image-api-div" id="image-api-div4"></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-up" id="scrollUp" onclick="scrollUpFunction()" hidden>
+            <button><i class="fa-solid fa-arrow-up"></i></button>
+        </div>
+
+    <!-- Footer -->
+
+    <div class="footer">
+        <p>&copy; 2022 Louie Joy Mambusao, All rights reserved</p>
+    </div>
+
+</body>
+</html>
+
+<!-- Jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Owl Carousel JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- Local JS -->
+<script>
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:20,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+        }
+    })
+
+    const expandedMenu = document.getElementById("expanded-menu-id");
+    const scrollUp = document.getElementById("scrollUp");
+    const carousel = document.getElementById("carousel");
+
+    window.addEventListener('scroll', () => {
+        const scrollable = document.documentElement.scrollHeight = window.innerHeight;
+        const scrolled = window.scrollY;
+        const halfscrolled = scrollable / 2;
+
+        console.log(scrollable);
+
+        if (scrolled >= halfscrolled ) {
+            scrollUp.style.display = "block";
+        } else {
+            scrollUp.style.display = "none";
+        }
+    })
+
+    function scrollUpFunction() {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+        });
+    }
+
+    function toggleFunction() {
+        expandedMenu.style.display = "block";
+        carousel.style.display = "none";
+        scrollUp.style.width = "0";
+    }
+
+    function toggleCloseFunction() {
+        expandedMenu.style.display = "none";
+        carousel.style.display = "block";
+    }
+
+    function seeMoreFunction1() {
+        const imageDiv1 = document.getElementById("image-api-div1")
+
+        fetch('https://random.dog/woof.json')
+            .then(res => res.json())
+            .then(data => {
+                imageDiv1.innerHTML = `<img src="${data.url}"/>`
+            })
+    }
+
+    function seeMoreFunction2() {
+        const imageDiv2 = document.getElementById("image-api-div2")
+
+        fetch('https://random.dog/woof.json')
+            .then(res => res.json())
+            .then(data => {
+                imageDiv2.innerHTML = `<img src="${data.url}"/>`
+            })
+    }
+
+    function seeMoreFunction3() {
+        const imageDiv3 = document.getElementById("image-api-div3")
+
+        fetch('https://random.dog/woof.json')
+            .then(res => res.json())
+            .then(data => {
+                imageDiv3.innerHTML = `<img src="${data.url}"/>`
+            })
+    }
+
+    function seeMoreFunction4() {
+        const imageDiv4 = document.getElementById("image-api-div4")
+
+        fetch('https://random.dog/woof.json')
+            .then(res => res.json())
+            .then(data => {
+                imageDiv4.innerHTML = `<img src="${data.url}"/>`
+            })
+    }
+</script>
