@@ -23,7 +23,7 @@ h3 {
 .navbar {
   width: 100%;
   height: 80px;
-  background: transparent;
+  background: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,10 +33,13 @@ h3 {
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
+  color: black;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  z-index: 2;
 }
 
 .navbar .logo {
-  color: white;
   cursor: pointer;
 }
 
@@ -56,12 +59,16 @@ h3 {
 }
 
 .navbar .menu ul li {
-  margin: 0 20px;
+  margin: 20px;
 }
 
 .navbar .menu ul li a {
   text-decoration: none;
-  color: white;
+  color: black;
+}
+
+.navbar .menu ul li a:hover {
+  color: #F13173;
 }
 
 .navbar .hamburger {
@@ -71,7 +78,7 @@ h3 {
 .navbar .hamburger i {
   cursor: pointer;
   font-size: 25px;
-  color: white;
+  color: black;
 }
 
 .navbar .hamburger .expanded-menu {

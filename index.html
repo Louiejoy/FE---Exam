@@ -7,7 +7,7 @@
     <title>FE - Exam</title>
 
     <!-- Local CSS -->
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@900&display=swap" rel="stylesheet">
@@ -64,7 +64,7 @@
             <h2>About</h2>
             <div class="content">
                 <div class="about-image">
-                    <img src="/img/About-image.jpg" alt="">
+                    <img src="img/About-image.jpg" alt="">
                 </div>
                 <div class="about-context">
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea laboriosam temporibus, earum delectus soluta distinctio, nostrum cumque quidem pariatur accusantium provident perferendis deserunt maiores eos rerum excepturi sapiente vitae dolores?</p>
@@ -134,94 +134,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 <!-- Local JS -->
-<script>
-    $('.owl-carousel').owlCarousel({
-        loop:true,
-        margin:20,
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:3
-            },
-        }
-    })
-
-    const expandedMenu = document.getElementById("expanded-menu-id");
-    const scrollUp = document.getElementById("scrollUp");
-    const carousel = document.getElementById("carousel");
-
-    window.addEventListener('scroll', () => {
-        const scrollable = document.documentElement.scrollHeight = window.innerHeight;
-        const scrolled = window.scrollY;
-        const halfscrolled = scrollable / 2;
-
-        console.log(scrollable);
-
-        if (scrolled >= halfscrolled ) {
-            scrollUp.style.display = "block";
-        } else {
-            scrollUp.style.display = "none";
-        }
-    })
-
-    function scrollUpFunction() {
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "smooth",
-        });
-    }
-
-    function toggleFunction() {
-        expandedMenu.style.display = "block";
-        carousel.style.display = "none";
-        scrollUp.style.width = "0";
-    }
-
-    function toggleCloseFunction() {
-        expandedMenu.style.display = "none";
-        carousel.style.display = "block";
-    }
-
-    function seeMoreFunction1() {
-        const imageDiv1 = document.getElementById("image-api-div1")
-
-        fetch('https://random.dog/woof.json')
-            .then(res => res.json())
-            .then(data => {
-                imageDiv1.innerHTML = `<img src="${data.url}"/>`
-            })
-    }
-
-    function seeMoreFunction2() {
-        const imageDiv2 = document.getElementById("image-api-div2")
-
-        fetch('https://random.dog/woof.json')
-            .then(res => res.json())
-            .then(data => {
-                imageDiv2.innerHTML = `<img src="${data.url}"/>`
-            })
-    }
-
-    function seeMoreFunction3() {
-        const imageDiv3 = document.getElementById("image-api-div3")
-
-        fetch('https://random.dog/woof.json')
-            .then(res => res.json())
-            .then(data => {
-                imageDiv3.innerHTML = `<img src="${data.url}"/>`
-            })
-    }
-
-    function seeMoreFunction4() {
-        const imageDiv4 = document.getElementById("image-api-div4")
-
-        fetch('https://random.dog/woof.json')
-            .then(res => res.json())
-            .then(data => {
-                imageDiv4.innerHTML = `<img src="${data.url}"/>`
-            })
-    }
-</script>
+<script src="/js/main.js"></script>
